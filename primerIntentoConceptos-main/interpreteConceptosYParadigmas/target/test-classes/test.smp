@@ -1,0 +1,105 @@
+// Programa de prueba completo
+
+program test {
+
+// ----------------------------------------------------------------
+    // 1. Verificación de Tipos de Datos Básicos (Asignación y Consola)
+    var unEntero;
+    unEntero = 45;
+    println unEntero;           // Debe imprimir: 45
+
+    var unReal;
+    unReal = 12.75;
+    println unReal;             // Debe imprimir: 12.75
+
+    var unaCadena;
+    unaCadena = "Probando el interprete";
+    println unaCadena;          // Debe imprimir: Probando el interprete
+
+    var unBooleano;
+    unBooleano = false;
+    println unBooleano;         // Debe imprimir: false
+
+
+    // 2. Verificación de Precedencia Aritmética Avanzada
+    var calcEnteros;
+    calcEnteros = 10 + 2 * 3 - 8 / 2;
+    println calcEnteros;        // Debe dar 12 (10 + 6 - 4) -> Evalúa precedencia * y / primero
+
+    var calcReales;
+    calcReales = 1.5 + 2.5 * 2.0;
+    println calcReales;         // Debe dar 6.5 (1.5 + 5.0)
+
+    var unarioNegativo;
+    unarioNegativo = -5 + 15;
+    println unarioNegativo;     // Debe dar 10
+
+
+    // 3. Verificación de Expresiones Lógicas y Operadores Relacionales
+    var operacionLogica;
+    operacionLogica = (10 > 5) && !(unReal < 5.0) || false;
+    println operacionLogica;    // Debe dar true
+
+
+    // 4. Verificación de la Variante: Estructura Condicional If-Else
+    var controlIf;
+    controlIf = 100;
+
+    if (controlIf >= 50) {
+        println "Condicion IF funciona correctamente";
+    } else {
+        println "Error: No deberia entrar al ELSE";
+    }
+
+
+    // 5. Verificación de la Variante: Bucle Iterativo Do-While
+    var vueltas;
+    vueltas = 1;
+
+    do {
+        println "Ejecutando vuelta del bucle do-while";
+        vueltas = vueltas + 1;
+    } while (vueltas <= 3);     // Debe imprimirse exactamente 3 veces
+
+
+    // 6. Comentarios (Línea y Multilínea)
+    // Esto es un comentario de una sola línea y no debe romperse.
+    /* Esto es un comentario
+       multilínea para el TP y
+       debe ser ignorado por el compilador */
+
+
+    // =================================================================
+    // CASOS DE PRUEBA EXPLICITOS PARA COMPROBAR ERRORES SEMÁNTICOS
+    // (Quitar las barras '//' para hacer la prueba)
+    // =================================================================
+
+    // --- Caso Error A: Variable duplicada ---
+    //var unEntero; 
+
+    // --- Caso Error B: Incompatibilidad de tipos ---
+    //unEntero = "Ahora soy una cadena"; 
+
+    // --- Caso Error C: Variable no declarada ---
+    //variableFantasma = 42; 
+
+    // --- Caso Error D: DIVISION POR CERO (Control semántico clave) ---
+    // var divisorCero;
+    // divisorCero = 10 / 0;
+    
+    // --- Caso Error E: Condición NO booleana en IF ---
+    // var textoFalso;
+    // textoFalso = "No soy un booleano";
+    // if (textoFalso) { 
+    //     println "Esto deberia fallar"; 
+    //}else{
+    //println "Else"; 
+    //}
+
+    // --- Caso Error F: Condición NO booleana en DO-WHILE ---
+    // var numeroInvalido;
+    // numeroInvalido = 100;
+    // do {
+    //     println "Bucle infinito o error?";
+    // } while (numeroInvalido);
+}
