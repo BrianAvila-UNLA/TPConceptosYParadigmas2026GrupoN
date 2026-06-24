@@ -32,7 +32,7 @@
 
 ### Prerrequisitos
 * **Java JDK:** Versión 24.0.2.
-* **Apache Maven:** Integrado en el IDE (Eclipse) o mediante terminal de comandos.
+* **Apache Maven:** 3.9.16.
 * **ANTLR:** Versión 4.13.1.
 
 * ### 1. Limpieza y Generación de Fuentes de ANTLR
